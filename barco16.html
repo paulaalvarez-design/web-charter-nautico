@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Investigación: Chárter Náutico España | Manuel & Paula</title>
+    <meta name="description" content="Análisis exhaustivo del mercado del chárter náutico en España. Descubre datos sobre la flota, requisitos legales, destinos estratégicos y estimaciones de rentabilidad para inversión.">
+    <meta name="keywords" content="chárter náutico España, alquiler barcos, inversión náutica, Manuel y Paula, Emigrant Dreams, flota náutica, requisitos legales barcos, rentabilidad barcos España">
+    <meta name="author" content="Paula Álvarez “González>
+<meta name="robots" content="index, follow">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="Assets/Img/favicon.png">
+
+
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:title" content="Investigación: El Negocio del Chárter Náutico en España">
+    <meta property="og:description" content="Análisis del ecosistema de alquiler de barcos: flota, legalidad y destinos más rentables.">
+    <meta property="og:image" content="Assets/Img/barcoatardecer.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_GB">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Investigación: Chárter Náutico España">
+    <meta name="twitter:description" content="Análisis estratégico del mercado náutico español y oportunidades de inversión.">
+    <meta name="twitter:image" content="Assets/Img/barcoatardecer.png">
+
+    <!-- Datos Estructurados JSON-LD (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ResearchProject",
+      "name": "Investigación sobre el negocio del chárter náutico en España",
+      "description": "Análisis del mercado del alquiler de barcos en España, incluyendo flota, requisitos legales, destinos y rentabilidad.",
+      "author": {
+        "@type": "Organization",
+        "name": "Manuel & Paula"
+      },
+      "inLanguage": "es",
+      "datePublished": "2024",
+      "about": {
+        "@type": "Thing",
+        "name": "Nautical Charter Market in Spain"
+      }
+    }
+    </script>
+
+    <!-- Bibliotecas Externas -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        sand: '#f5f5f4'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Desplazamiento suave nativo */
+        html { 
+            scroll-behavior: smooth; 
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: 300px;
+            margin: 0 auto;
+        }
+        
+        /* Menú Lateral (Sidebar) */
+        #sidebar {
+            transition: transform 0.3s ease-in-out;
+            z-index: 100;
+        }
+        
+        .sidebar-closed {
+            transform: translateX(-100%);
+        }
+
+        .sidebar-open {
+            transform: translateX(0);
+        }
+
+        #overlay {
+            display: none;
+            background: rgba(0,0,0,0.5);
+            z-index: 90;
+        }
+
+        /* EFECTO PARALLAX EN HERO */
+        #intro {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Assets/Img/barcoatardecer.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100%;
+        } 
+
+        /* Fix para móviles */
+        @media (max-width: 1024px) {
+            #intro {
+                background-attachment: scroll;
+            }
+        }
+
+        /* ESTILOS GALERÍA */
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 1rem;
+            position: relative;
+            height: 300px;
+            background-color: #e5e7eb;
+        }
+        .gallery-item img {
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            background: linear-gradient(to top, rgba(12, 74, 110, 0.85), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Selector de Idioma */
+        .lang-btn {
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-size: 1.5rem;
+        }
+        .lang-btn:hover {
+            transform: scale(1.2);
+        }
+        
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Investigación: Chárter Náutico España | Manuel & Paula</title>
+    <meta name="description" content="Análisis exhaustivo del mercado del chárter náutico en España. Descubre datos sobre la flota, requisitos legales, destinos estratégicos y estimaciones de rentabilidad para inversión.">
+    <meta name="keywords" content="chárter náutico España, alquiler barcos, inversión náutica, Manuel y Paula, Emigrant Dreams, flota náutica, requisitos legales barcos, rentabilidad barcos España">
+    <meta name="author" content="Manuel & Paula">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:title" content="Investigación: El Negocio del Chárter Náutico en España">
+    <meta property="og:description" content="Análisis del ecosistema de alquiler de barcos: flota, legalidad y destinos más rentables.">
+    <meta property="og:image" content="Assets/Img/barcoatardecer.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_GB">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Investigación: Chárter Náutico España">
+    <meta name="twitter:description" content="Análisis estratégico del mercado náutico español y oportunidades de inversión.">
+    <meta name="twitter:image" content="Assets/Img/barcoatardecer.png">
+
+    <!-- Datos Estructurados JSON-LD (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ResearchProject",
+      "name": "Investigación sobre el negocio del chárter náutico en España",
+      "description": "Análisis del mercado del alquiler de barcos en España, incluyendo flota, requisitos legales, destinos y rentabilidad.",
+      "author": {
+        "@type": "Organization",
+        "name": "Manuel & Paula"
+      },
+      "inLanguage": "es",
+      "datePublished": "2024",
+      "about": {
+        "@type": "Thing",
+        "name": "Nautical Charter Market in Spain"
+      }
+    }
+    </script>
+
+    <!-- Bibliotecas Externas -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        sand: '#f5f5f4'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Desplazamiento suave nativo */
+        html { 
+            scroll-behavior: smooth; 
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: 300px;
+            margin: 0 auto;
+        }
+        
+        /* Menú Lateral (Sidebar) */
+        #sidebar {
+            transition: transform 0.3s ease-in-out;
+            z-index: 100;
+        }
+        
+        .sidebar-closed {
+            transform: translateX(-100%);
+        }
+
+        .sidebar-open {
+            transform: translateX(0);
+        }
+
+        #overlay {
+            display: none;
+            background: rgba(0,0,0,0.5);
+            z-index: 90;
+        }
+
+        /* EFECTO PARALLAX EN HERO */
+        #intro {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Assets/Img/barcoatardecer.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100%;
+        } 
+
+        /* Fix para móviles */
+        @media (max-width: 1024px) {
+            #intro {
+                background-attachment: scroll;
+            }
+        }
+
+        /* ESTILOS GALERÍA */
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 1rem;
+            position: relative;
+            height: 300px;
+            background-color: #e5e7eb;
+        }
+        .gallery-item img {
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            background: linear-gradient(to top, rgba(12, 74, 110, 0.85), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Selector de Idioma */
+        .lang-btn {
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-size: 1.5rem;
+        }
+        .lang-btn:hover {
+            transform: scale(1.2);
+        }
+        .lang-btn.active {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.8));
+    border-bottom: 2px solid white;
+}
+
+/* Fondo imagen sección contacto */
+#contacto {
+    background-image: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('Assets/Img/mar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+</style>
+
+</head>
+<body class="bg-sand text-ocean-900 font-sans">
+
+    <!-- Header con selector de idioma y hamburguesa -->
+    <header class="fixed top-0 left-0 w-full z-[110] p-4 flex justify-between items-center pointer-events-none">
+        <button id="menu-toggle" class="p-3 bg-ocean-600 text-white rounded-full shadow-lg hover:bg-ocean-800 transition-colors pointer-events-auto">
+            <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+        </button>
+
+        <div class="flex gap-4 bg-black/20 backdrop-blur-md p-2 rounded-full pointer-events-auto border border-white/10">
+            <span onclick="setLanguage('es')" class="lang-btn" id="btn-es" title="Español">🇪🇸</span>
+            <span onclick="setLanguage('en')" class="lang-btn" id="btn-en" title="English">🇬🇧</span>
+        </div>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0"></div>
+
+    <!-- Sidebar Navegación -->
+    <aside id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-2xl sidebar-closed pt-20 px-6">
+        <nav class="flex flex-col space-y-4">
+            <h2 class="text-xs font-bold uppercase text-gray-400 tracking-widest mb-4" 
+                data-es="Navegación" data-en="Navigation">Navegación</h2>
+            <a href="#intro" class="nav-item flex items-center space-x-3 text-ocean-800 hover:text-ocean-600 font-medium py-2 border-b border-gray-100">
+                <i class="fa-solid fa-house w-5 text-center"></i> <span data-es="Inicio" data-en="Home">Inicio</span>
+            </a>
+            <a href="#fleet" class="nav-item flex items-center space-x-3 text-ocean-800 hover:text-ocean-600 font-medium py-2 border-b border-gray-100">
+                <i class="fa-solid fa-sailboat w-5 text-center"></i> <span data-es="La Flota" data-en="The Fleet">La Flota</span>
+            </a>
+            <a href="#experiencia" class="nav-item flex items-center space-x-3 text-ocean-800 hover:text-ocean-600 font-medium py-2 border-b border-gray-100">
+                <i class="fa-solid fa-award w-5 text-center"></i> <span data-es="Experiencia" data-en="Experience">Experiencia</span>
+            </a>
+            <a href="#destinations" class="nav-item flex items-center space-x-3 text-ocean-800 hover:text-ocean-600 font-medium py-2 border-b border-gray-100">
+                <i class="fa-solid fa-map-location-dot w-5 text-center"></i> <span data-es="Destinos" data-en="Destinations">Destinos</span>
+            </a>
+            <a href="#legal" class="nav-item flex items-center space-x-3 text-ocean-800 hover:text-ocean-600 font-medium py-2 border-b border-gray-100">
+                <i class="fa-solid fa-scale-balanced w-5 text-center"></i> <span data-es="Legal" data-en="Legal">Legal</span>
+            </a>
+            <a href="#economics" class="nav-item flex items-center space-x-3 text-ocean-800 hover:text-ocean-600 font-medium py-2 border-b border-gray-100">
+                <i class="fa-solid fa-euro-sign w-5 text-center"></i> <span data-es="Precios" data-en="Pricing">Precios</span>
+            </a>
+            <a href="#gallery" class="nav-item flex items-center space-x-3 text-ocean-800 hover:text-ocean-600 font-medium py-2 border-b border-gray-100">
+                <i class="fa-solid fa-images w-5 text-center"></i> <span data-es="Galería" data-en="Gallery">Galería</span>
+            </a>
+            <a href="#social" class="nav-item flex items-center space-x-3 text-ocean-800 hover:text-ocean-600 font-medium py-2 border-b border-gray-100">
+                <i class="fa-brands fa-instagram w-5 text-center"></i> <span data-es="Experiencias" data-en="Experiences">Experiencias</span>
+            </a>
+            <a href="#contacto" class="nav-item flex items-center space-x-3 text-ocean-800 hover:text-ocean-600 font-medium py-2 border-b border-gray-100">
+                <i class="fa-solid fa-envelope w-5 text-center"></i> <span data-es="Contacto" data-en="Contact">Contacto</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="min-h-screen transition-all duration-300 ml-0" id="content-area">
+        
+        <!-- Hero Section -->
+        <section id="intro" class="flex items-center justify-center px-6 text-center">
+            <div class="max-w-4xl">
+                <div class="inline-block p-2 px-4 rounded-full bg-ocean-600 text-white text-xs font-bold uppercase tracking-widest mb-6 shadow-md"
+                     data-es="Investigación de Mercado 2024" data-en="Market Research 2024">Investigación de Mercado 2024</div>
+                <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight drop-shadow-2xl"
+                    data-es="El Negocio del Chárter Náutico en España" data-en="The Nautical Charter Business in Spain">
+                    El Negocio del Chárter Náutico en España
+                </h1>
+                <p class="text-xl text-ocean-50 leading-relaxed max-w-2xl mx-auto mb-10 drop-shadow-lg"
+                   data-es="Analizamos el ecosistema del alquiler de barcos: desde los requisitos legales hasta los activos más rentables para inversión."
+                   data-en="We analyze the boat rental ecosystem: from legal requirements to the most profitable assets for investment.">
+                    Analizamos el ecosistema del alquiler de barcos: desde los requisitos legales hasta los activos más rentables para inversión.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#fleet" class="px-8 py-3 bg-ocean-600 text-white font-bold rounded-lg shadow-lg hover:bg-ocean-700 transition-all"
+                       data-es="Explorar Flota" data-en="Explore Fleet">Explorar Flota</a>
+                    <a href="#legal" class="px-8 py-3 bg-white/10 backdrop-blur-md text-white font-bold rounded-lg border border-white/20 shadow-sm hover:bg-white/30 transition-all"
+                       data-es="Ver Requisitos" data-en="View Requirements">Ver Requisitos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fleet Stats Section -->
+        <section id="fleet" class="py-24 px-6 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-ocean-900 mb-6" data-es="Tipos de Barcos y Modalidades" data-en="Boat Types and Modalities">Tipos de Barcos y Modalidades</h2>
+                        <p class="text-gray-600 mb-8 leading-relaxed"
+                           data-es="La oferta en España se divide principalmente entre barcos de recreo para el día (Day Charter) y embarcaciones de vida a bordo para semanas completas."
+                           data-en="The offer in Spain is mainly divided between recreational boats for the day (Day Charter) and live-aboard vessels for full weeks.">
+                            La oferta en España se divide principalmente entre barcos de recreo para el día (Day Charter) y embarcaciones de vida a bordo para semanas completas.
+                        </p>
+                        <div class="space-y-4 text-sm">
+                            <div class="p-4 bg-ocean-50 rounded-lg border-l-4 border-ocean-600">
+                                <h4 class="font-bold" data-es="Con Patrón (65% de la demanda)" data-en="With Skipper (65% demand)">Con Patrón (65% de la demanda)</h4>
+                                <p class="text-gray-600" data-es="Perfil turista que busca relax. El patrón aporta seguridad y conocimiento local." data-en="Tourist profile looking for relaxation. The skipper provides safety and local knowledge.">Perfil turista que busca relax. El patrón aporta seguridad y conocimiento local.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-gray-400">
+                                <h4 class="font-bold" data-es="Sin Patrón (Bareboat)" data-en="Bareboat (Self-drive)">Sin Patrón (Bareboat)</h4>
+                                <p class="text-gray-600" data-es="Requiere titulación náutica y experiencia. Perfil técnico y recurrente." data-en="Requires nautical certification and experience. Technical and recurrent profile.">Requiere titulación náutica y experiencia. Perfil técnico y recurrente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-sand p-8 rounded-2xl shadow-inner">
+                        <h3 class="text-center font-bold mb-6 text-ocean-800" data-es="Distribución de Alquiler por Tipo" data-en="Rental Distribution by Type">Distribución de Alquiler por Tipo</h3>
+                        <div class="chart-container">
+                            <canvas id="fleetChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN NUESTRA EXPERIENCIA (E-E-A-T) -->
+        <section id="experiencia" class="py-24 px-6 bg-sand text-center">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="text-4xl font-black text-ocean-900 mb-4" 
+                        data-es="Nuestra experiencia en el sector náutico" 
+                        data-en="Our Experience in the Nautical Sector">
+                        Nuestra experiencia en el sector náutico
+                    </h2>
+                    <div class="w-24 h-1 bg-ocean-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-ocean-100 flex flex-col items-center hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-chart-line text-2xl text-ocean-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ocean-900 mb-4" data-es="Investigación del mercado" data-en="Market Research">Investigación del mercado</h3>
+                        <p class="text-gray-600 leading-relaxed" data-es="Hemos analizado el mercado del alquiler de barcos en España para identificar los modelos de negocio más rentables." data-en="We have analyzed the boat rental market in Spain to identify the most profitable business models.">Hemos analizado el mercado del alquiler de barcos en España para identificar los modelos de negocio más rentables.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-ocean-100 flex flex-col items-center hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-anchor text-2xl text-ocean-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ocean-900 mb-4" data-es="Conocimiento del sector" data-en="Industry Knowledge">Conocimiento del sector</h3>
+                        <p class="text-gray-600 leading-relaxed" data-es="Estudiamos tipos de embarcaciones, perfiles de clientes y destinos con mayor demanda turística." data-en="We study boat types, client profiles, and destinations with the highest tourist demand.">Estudiamos tipos de embarcaciones, perfiles de clientes y destinos con mayor demanda turística.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-ocean-100 flex flex-col items-center hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-lightbulb text-2xl text-ocean-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ocean-900 mb-4" data-es="Enfoque estratégico" data-en="Strategic Approach">Enfoque estratégico</h3>
+                        <p class="text-gray-600 leading-relaxed" data-es="Nuestro objetivo es comprender cómo funciona el chárter náutico y detectar oportunidades de inversión." data-en="Our goal is to understand how nautical chartering works and detect investment opportunities.">Nuestro objetivo es comprender cómo funciona el chárter náutico y detectar oportunidades de inversión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destinations Section -->
+        <section id="destinations" class="py-24 px-6 bg-white text-center">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12 text-ocean-900" data-es="Destinos Estratégicos" data-en="Strategic Destinations">Destinos Estratégicos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-sand p-6 rounded-xl shadow-sm border border-ocean-100 hover:shadow-md transition-shadow">
+                        <i class="fa-solid fa-anchor text-ocean-600 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Islas Baleares</h3>
+                        <p class="text-gray-600 text-sm mb-4" data-es="Ibiza, Mallorca y Menorca concentran el 50% de la facturación nacional. Mercado de lujo." data-en="Ibiza, Mallorca and Menorca concentrate 50% of national turnover. Luxury market.">Ibiza, Mallorca y Menorca concentran el 50% de la facturación nacional. Mercado de lujo.</p>
+                        <span class="text-xs font-bold text-ocean-600 uppercase tracking-widest" data-es="Rentabilidad: Muy Alta" data-en="Profitability: Very High">Rentabilidad: Muy Alta</span>
+                    </div>
+                    <div class="bg-sand p-6 rounded-xl shadow-sm border border-ocean-100 hover:shadow-md transition-shadow">
+                        <i class="fa-solid fa-sun text-ocean-600 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Costa Blanca / Valencia</h3>
+                        <p class="text-gray-600 text-sm mb-4" data-es="Temporada muy larga. Denia y Alicante son bases clave para cruzar a las islas." data-en="Very long season. Denia and Alicante are key bases for crossing to the islands.">Temporada muy larga. Denia y Alicante son bases clave para cruzar a las islas.</p>
+                        <span class="text-xs font-bold text-ocean-600 uppercase tracking-widest" data-es="Rentabilidad: Alta" data-en="Profitability: High">Rentabilidad: Alta</span>
+                    </div>
+                    <div class="bg-sand p-6 rounded-xl shadow-sm border border-ocean-100 hover:shadow-md transition-shadow">
+                        <i class="fa-solid fa-cloud-sun text-ocean-600 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Norte (Cantábrico)</h3>
+                        <p class="text-gray-600 text-sm mb-4" data-es="Creciente interés en Asturias y Cantabria por el turismo no masificado. Navegación técnica." data-en="Growing interest in Asturias and Cantabria for non-mass tourism. Technical navigation.">Creciente interés en Asturias y Cantabria por el turismo no masificado. Navegación técnica.</p>
+                        <span class="text-xs font-bold text-ocean-600 uppercase tracking-widest" data-es="Rentabilidad: En Crecimiento" data-en="Profitability: Growing">Rentabilidad: En Crecimiento</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Section -->
+        <section id="legal" class="py-24 px-6 bg-ocean-900 text-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-md rounded-[3rem] p-10 shadow-2xl relative overflow-hidden text-left">
+                    <div class="absolute -top-10 -right-10 opacity-10"><i class="fa-solid fa-scale-balanced text-[15rem]"></i></div>
+                    <h2 class="text-3xl font-black mb-10 text-center" data-es="Marco Legal del Chárter" data-en="Legal Charter Framework">Marco Legal del Chárter</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm leading-relaxed">
+                        <div>
+                            <h4 class="font-bold text-ocean-100 mb-4 border-b border-white/20 pb-2" data-es="Fiscalidad y Activos" data-en="Taxation and Assets">Fiscalidad y Activos</h4>
+                            <ul class="space-y-4">
+                                <li data-es="• Matriculación en Lista Sexta (exclusivo alquiler)." data-en="• Registration on 'Lista Sexta' (rental only).">• Matriculación en <strong>Lista Sexta</strong> (exclusivo alquiler).</li>
+                                <li data-es="• Exención del impuesto del 12% bajo condiciones comerciales." data-en="• 12% tax exemption under commercial conditions.">• Exención del impuesto del 12% bajo condiciones comerciales.</li>
+                                <li data-es="• ITB e inspecciones anuales obligatorias." data-en="• ITB and mandatory annual inspections.">• ITB e inspecciones anuales obligatorias.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-ocean-100 mb-4 border-b border-white/20 pb-2" data-es="Requisitos de Usuario" data-en="User Requirements">Requisitos de Usuario</h4>
+                            <ul class="space-y-4">
+                                <li data-es="• Titulaciones: PNB, PER o Patrón de Yate." data-en="• Licenses: PNB, PER or Yacht Master.">• Titulaciones: PNB, PER o Patrón de Yate.</li>
+                                <li data-es="• Licencia de navegación ('Titulín') para barcos < 6m." data-en="• Basic navigation license ('Titulín') for boats < 6m.">• Licencia de navegación ("Titulín") para barcos < 6m.</li>
+                                <li data-es="• Firma de contrato y fianza obligatoria." data-en="• Contract signing and mandatory security deposit.">• Firma de contrato y fianza obligatoria.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Economics Section -->
+        <section id="economics" class="py-24 px-6 bg-sand">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-ocean-900" data-es="Estimador de Inversión y Precios" data-en="Investment and Price Estimator">Estimador de Inversión y Precios</h2>
+                    <p class="text-gray-600" data-es="Calcula los ingresos brutos diarios estimados por categoría de activo." data-en="Calculate estimated gross daily income by asset category.">Calcula los ingresos brutos diarios estimados por categoría de activo.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-1 bg-white p-8 rounded-2xl shadow-sm space-y-6 text-sm">
+                        <div>
+                            <label class="block font-bold text-gray-700 mb-2" data-es="Tipo de Barco" data-en="Boat Type">Tipo de Barco</label>
+                            <select id="price-boat" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg outline-none">
+                                <option value="motor_small" data-es="Lancha < 8m" data-en="Powerboat < 8m">Lancha < 8m</option>
+                                <option value="sailing" data-es="Velero 12m" data-en="Sailboat 12m">Velero 12m</option>
+                                <option value="catamaran" selected data-es="Catamarán 14m" data-en="Catamaran 14m">Catamarán 14m</option>
+                                <option value="yacht" data-es="Yate Lujo > 20m" data-en="Luxury Yacht > 20m">Yate Lujo > 20m</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block font-bold text-gray-700 mb-2" data-es="Temporada" data-en="Season">Temporada</label>
+                            <select id="price-season" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg outline-none">
+                                <option value="low" data-es="Baja (Invierno)" data-en="Low (Winter)">Baja (Invierno)</option>
+                                <option value="mid" data-es="Media (Mayo/Junio)" data-en="Mid (May/June)">Media (Mayo/Junio)</option>
+                                <option value="high" selected data-es="Alta (Julio/Agosto)" data-en="High (July/August)">Alta (Julio/Agosto)</option>
+                            </select>
+                        </div>
+                        <div class="pt-6 border-t border-gray-100 text-center">
+                            <div class="text-gray-500 text-xs uppercase font-bold tracking-widest mb-1" data-es="Ingreso Diario Estimado" data-en="Estimated Daily Income">Ingreso Diario Estimado</div>
+                            <div id="daily-estimate" class="text-4xl font-black text-ocean-600">-- €</div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 bg-white p-8 rounded-2xl shadow-sm">
+                        <h3 class="font-bold mb-6 text-ocean-800 text-center" data-es="Comparativa de Precios por Temporada" data-en="Price Comparison by Season">Comparativa de Precios por Temporada</h3>
+                        <div class="chart-container">
+                            <canvas id="priceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section id="gallery" class="py-24 px-6 bg-white">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-4xl font-black text-ocean-900 mb-4" data-es="Galería de la Flota Real" data-en="Real Fleet Gallery">Galería de la Flota Real</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto italic mb-16" data-es="Explora los activos analizados para intermediación y gestión turística." data-en="Explore the assets analyzed for brokerage and tourism management.">Explora los activos analizados para intermediación y gestión turística.</p>
+               <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+<div class="gallery-item shadow-md">
+<img src="Assets/Img/velero.jpg" alt="Velero">
+</div>
+
+<div class="gallery-item shadow-md">
+<img src="Assets/Img/cubierta.jpg" alt="Cubierta">
+</div>
+
+<div class="gallery-item shadow-md">
+<img src="Assets/Img/fondeo.jpg" alt="Fondeo">
+</div>
+
+<div class="gallery-item shadow-md">
+<img src="Assets/Img/navegacion.jpg" alt="Navegación">
+</div>
+
+<div class="gallery-item shadow-md">
+<img src="Assets/Img/motora.jpg" alt="Motora clásica">
+</div>
+
+<div class="gallery-item shadow-md">
+<img src="Assets/Img/lancha.jpg" alt="Lancha moderna">
+</div>
+
+<div class="gallery-item shadow-md">
+<img src="Assets/Img/crucero.jpg" alt="Crucero">
+</div>
+
+<div class="gallery-item shadow-md">
+<img src="Assets/Img/catamaran.jpg" alt="Catamarán">
+</div>
+
+<div class="gallery-item shadow-md">
+<img src="Assets/Img/atardecer.jpg" alt="Atardecer en barco">
+</div>
+
+<div class="gallery-item shadow-md">
+<img src="Assets/Img/superyate.jpg" alt="Superyate">
+</div>
+
+</div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social" class="py-24 px-6 bg-sand">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 text-center md:text-left">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-ocean-900 leading-tight" data-es="Impacto en Redes Sociales" data-en="Social Media Impact">Impacto en Redes Sociales</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed" data-es="Instagram y YouTube son fundamentales para captar al cliente internacional." data-en="Instagram and YouTube are essential to capture international clients.">
+                        Instagram y YouTube son fundamentales para captar al cliente internacional que busca el estilo de vida español mediante el alquiler náutico.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="p-4 bg-white rounded-xl shadow-sm text-center flex-1">
+                            <i class="fa-brands fa-instagram text-3xl text-[#E1306C] mb-2"></i>
+                            <p class="text-xs font-bold uppercase text-gray-500" data-es="Visuales" data-en="Visuals">Visuales</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl shadow-sm text-center flex-1">
+                            <i class="fa-brands fa-youtube text-3xl text-[#FF0000] mb-2"></i>
+                            <p class="text-xs font-bold uppercase text-gray-500" data-es="Tutoriales" data-en="Tutorials">Tutoriales</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-ocean-600 text-white p-6 rounded-2xl text-center shadow-lg">
+                        <p class="text-3xl font-black">92%</p>
+                        <p class="text-[10px] uppercase font-bold opacity-80" data-es="Decisión por Fotos" data-en="Decision by Photos">Decisión por Fotos</p>
+                    </div>
+                    <div class="bg-ocean-800 text-white p-6 rounded-2xl text-center shadow-lg">
+                        <p class="text-3xl font-black">+40%</p>
+                        <p class="text-[10px] uppercase font-bold opacity-80" data-es="Retorno por Vídeo" data-en="ROI by Video">Retorno por Vídeo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="py-24 px-6 reveal-section">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black text-ocean-900 mb-4" data-es="Contacto" data-en="Contact">Contacto</h2>
+                    <div class="w-24 h-1 bg-ocean-600 mx-auto rounded-full"></div>
+                </div>
+
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2" data-es="Nombre y apellidos" data-en="Full Name">Nombre y apellidos</label>
+                        <input type="text" name="name" class="w-full p-4 text-lg border-2 border-gray-100 rounded-2xl outline-none focus:border-ocean-600 transition-all" placeholder="..." required style="font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2" data-es="Teléfono" data-en="Phone Number">Teléfono</label>
+                        <input type="tel" name="phone" class="w-full p-4 text-lg border-2 border-gray-100 rounded-2xl outline-none focus:border-ocean-600 transition-all" placeholder="..." required style="font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2" data-es="Correo electrónico" data-en="Email Address">Correo electrónico</label>
+                        <input type="email" name="email" class="w-full p-4 text-lg border-2 border-gray-100 rounded-2xl outline-none focus:border-ocean-600 transition-all" placeholder="..." required style="font-size: 16px;">
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full py-4 bg-ocean-600 text-white font-black text-lg rounded-full shadow-lg hover:bg-ocean-700 transition-all transform hover:scale-105 active:scale-95" data-es="Enviar consulta" data-en="Send inquiry">
+                            Enviar consulta
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer Profesional -->
+        <footer class="bg-ocean-900 text-white py-16 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    <!-- Columna 1: Marca -->
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-black tracking-widest text-ocean-100 uppercase">Manuel & Paula</h3>
+                        <p class="text-sm text-ocean-100/70 leading-relaxed" data-es="Especialistas en investigación y gestión de activos náuticos e inmobiliarios en Cantabria y Asturias." data-en="Specialists in research and management of nautical and real estate assets in Cantabria and Asturias.">
+                            Especialistas en investigación y gestión de activos náuticos e inmobiliarios en Cantabria y Asturias.
+                        </p>
+                        <div class="flex gap-4 pt-2">
+                            <a href="#" class="text-2xl hover:text-[#E1306C] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="text-2xl hover:text-[#FF0000] transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://wa.me/34684667894" class="text-2xl hover:text-[#25D366] transition-colors" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2: Contacto -->
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-bold text-white" data-es="Contacto" data-en="Contact Us">Contacto</h4>
+                        <ul class="space-y-3 text-sm text-ocean-100/70">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-phone text-ocean-600"></i>
+                                <span>+34 684 667 894</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-location-dot text-ocean-600 mt-1"></i>
+                                <span>General David 30,<br>Santander (Cantabria)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 3: Navegación Rápida -->
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-bold text-white" data-es="Explorar" data-en="Explore">Explorar</h4>
+                        <ul class="space-y-2 text-sm text-ocean-100/70">
+                            <li><a href="#intro" class="hover:text-white transition-colors" data-es="Inicio" data-en="Home">Inicio</a></li>
+                            <li><a href="#fleet" class="hover:text-white transition-colors" data-es="La Flota" data-en="The Fleet">La Flota</a></li>
+                            <li><a href="#economics" class="hover:text-white transition-colors" data-es="Simulador de Precios" data-en="Price Simulator">Simulador de Precios</a></li>
+                            <li><a href="#contacto" class="hover:text-white transition-colors" data-es="Contacto" data-en="Contact">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 4: Legal -->
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-bold text-white" data-es="Legal" data-en="Legal">Legal</h4>
+                        <ul class="space-y-2 text-sm text-ocean-100/70">
+                            <li><a href="#" class="hover:text-white transition-colors" data-es="Política de privacidad" data-en="Privacy Policy">Política de privacidad</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" data-es="Política de cookies" data-en="Cookies Policy">Política de cookies</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors" data-es="Aviso legal" data-en="Legal Notice">Aviso legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="pt-8 border-t border-white/10 text-center">
+                    <p class="text-xs text-ocean-100/50 italic">
+                        &copy; 2024 Investigación Náutica Paula Álvarez Gonzalez
+                    </p>
+                    <p class="text-[10px] mt-2 text-ocean-100/30 uppercase tracking-widest">Emigrant Dreams Group</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Scripts Logic -->
+    <script>
+        let currentLang = localStorage.getItem('selectedLang') || 'es';
+        let fleetChart, priceChart;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initMenu();
+            initCharts();
+            initPriceLogic();
+            updateLanguageUI();
+            initSmoothScrolling();
+        });
+
+        // FUNCIÓN DE DESPLAZAMIENTO SUAVE
+        function initSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        const sidebar = document.getElementById('sidebar');
+                        const overlay = document.getElementById('overlay');
+                        const menuIcon = document.getElementById('menu-icon');
+                        
+                        if (sidebar.classList.contains('sidebar-open')) {
+                            sidebar.classList.remove('sidebar-open');
+                            sidebar.classList.add('sidebar-closed');
+                            overlay.style.display = 'none';
+                            menuIcon.classList.replace('fa-xmark', 'fa-bars');
+                        }
+
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        function initMenu() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const menuIcon = document.getElementById('menu-icon');
+
+            const toggleMenu = () => {
+                const isOpen = sidebar.classList.contains('sidebar-open');
+                if (isOpen) {
+                    sidebar.classList.remove('sidebar-open');
+                    sidebar.classList.add('sidebar-closed');
+                    overlay.style.display = 'none';
+                    menuIcon.classList.replace('fa-xmark', 'fa-bars');
+                } else {
+                    sidebar.classList.remove('sidebar-closed');
+                    sidebar.classList.add('sidebar-open');
+                    overlay.style.display = 'block';
+                    menuIcon.classList.replace('fa-bars', 'fa-xmark');
+                }
+            };
+
+            menuToggle.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+        }
+
+        function initCharts() {
+            const ctxFleet = document.getElementById('fleetChart').getContext('2d');
+            fleetChart = new Chart(ctxFleet, {
+                type: 'doughnut',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        data: [45, 25, 20, 10],
+                        backgroundColor: ['#0284c7', '#38bdf8', '#f59e0b', '#0c4a6e'],
+                        borderWidth: 0,
+                        hoverOffset: 15
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom', labels: { font: { weight: 'bold' } } } }
+                }
+            });
+
+            const ctxPrice = document.getElementById('priceChart').getContext('2d');
+            priceChart = new Chart(ctxPrice, {
+                type: 'bar',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: '',
+                        data: [0, 0, 0],
+                        backgroundColor: '#0284c7',
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true } }
+                }
+            });
+        }
+
+        function initPriceLogic() {
+            const pricingData = {
+                motor_small: { low: 250, mid: 350, high: 550 },
+                sailing:     { low: 400, mid: 600, high: 900 },
+                catamaran:   { low: 800, mid: 1200, high: 2100 },
+                yacht:       { low: 2500, mid: 4000, high: 7500 }
+            };
+
+            const updatePrice = () => {
+                const boat = document.getElementById('price-boat').value;
+                const season = document.getElementById('price-season').value;
+                const data = pricingData[boat];
+                if(data) {
+                    document.getElementById('daily-estimate').innerText = data[season] + ' €';
+                    priceChart.data.datasets[0].data = [data.low, data.mid, data.high];
+                    priceChart.update();
+                }
+            };
+
+            document.getElementById('price-boat').addEventListener('change', updatePrice);
+            document.getElementById('price-season').addEventListener('change', updatePrice);
+            updatePrice();
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('selectedLang', lang);
+            updateLanguageUI();
+        }
+
+        function updateLanguageUI() {
+            const elements = document.querySelectorAll('[data-es]');
+            elements.forEach(el => {
+                el.innerHTML = el.getAttribute(`data-${currentLang}`);
+            });
+
+            const selects = document.querySelectorAll('select option');
+            selects.forEach(opt => {
+                if(opt.hasAttribute(`data-${currentLang}`)) {
+                    opt.text = opt.getAttribute(`data-${currentLang}`);
+                }
+            });
+
+            document.getElementById('btn-es').classList.toggle('active', currentLang === 'es');
+            document.getElementById('btn-en').classList.toggle('active', currentLang === 'en');
+            document.documentElement.lang = currentLang;
+
+            updateChartsLanguage();
+        }
+
+        function updateChartsLanguage() {
+            if(!fleetChart || !priceChart) return;
+            fleetChart.data.labels = currentLang === 'es' ? ['Motoras', 'Veleros', 'Catamaranes', 'Yates Lujo'] : ['Powerboats', 'Sailboats', 'Catamarans', 'Luxury Yachts'];
+            fleetChart.update();
+            priceChart.data.labels = currentLang === 'es' ? ['Baja', 'Media', 'Alta'] : ['Low', 'Mid', 'High'];
+            priceChart.data.datasets[0].label = currentLang === 'es' ? 'Euros por Día' : 'Euros per Day';
+            priceChart.update();
+        }
+    </script>
+</body>
+</html>
